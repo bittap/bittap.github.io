@@ -59,5 +59,29 @@
   var demoItems = document.querySelectorAll('.grid-item')
 }());
 
+//////////////////////////image preview//////////////////////////////
+(function(){
+    const imagePriviewModal = document.querySelector('#imagePriviewModal');
+    const closeBtn = imagePriviewModal.querySelector('#imagePriviewClose');
+    const previewImg = imagePriviewModal.querySelector('#imagePriviewImg');
+    const caption = imagePriviewModal.querySelector('#imagePriviewCaption');
+
+    let imgs = document.querySelectorAll('img');
+    imgs.forEach(function(img){
+      img.onclick = function(){
+        imagePriviewModal.style.display = "block";
+        previewImg.src = this.src;
+        caption.innerHTML = this.alt;
+      }
+    })
+
+    closeBtn.onclick = function(){
+        imagePriviewModal.style.display = "none";
+    }
+
+    imagePriviewModal.onclick = function(){
+        imagePriviewModal.style.display = "none";
+    }
+}());
 
 
