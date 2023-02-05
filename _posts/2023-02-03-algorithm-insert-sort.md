@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "[ソート]挿入ソートとはわかりやすく"
-author: bittap
 categories: アルゴリズム
 tags: アルゴリズム
 ---
@@ -38,24 +37,6 @@ tags: アルゴリズム
 | :-: |
 | 10 50 30 20 40 -> 10 20 30 40 50にソートする |
 
-①1回目
-
-![img-description](/assets/img/posts/insert-sort/1.PNG)
-
-②2回目
-
-![img-description](/assets/img/posts/insert-sort/2.PNG)
-
-③3回目
-
-![img-description](/assets/img/posts/insert-sort/3.PNG)
-
-④4回目
-
-![img-description](/assets/img/posts/insert-sort/4.PNG)
-
-⑤5回目
-
-![img-description](/assets/img/posts/insert-sort/5.PNG)
+![img-description](/images/posts/2023-02-03-algorithm-insert-sort/image1.PNG)
 
 ## 挿入ソートの特徴
