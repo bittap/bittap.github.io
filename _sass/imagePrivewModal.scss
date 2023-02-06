@@ -64,7 +64,10 @@
 
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
+  .imagePriviewModal{
+    padding-top: 40vh;
+  }
   .modal-content {
-    width: 100%;
+    max-width: 95%;
   }
 }
