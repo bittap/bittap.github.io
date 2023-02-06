@@ -8,14 +8,11 @@ tags: アルゴリズム
 * content
 {:toc}
 
-挿入ソートは難しくないアルゴリズムです。
+`挿入ソート`は難しくないアルゴリズムです。そのため効率的なアルゴリズムではないですがソートアルゴリズムを勉強するのに、とても役に立つと思います。
+自分の場合いつも`挿入シート`と選択ソートこんがらがったため記事を作成しました。
 
 
 
-
-
-##### 毎回引っかかったところ
-いつも`挿入シート`と`選択ソート`こんがらがった。
 
 ## ポイント
 
@@ -33,10 +30,37 @@ tags: アルゴリズム
 ## 挿入ソートの図
 目標
 
-| |
-| :-: |
-| 10 50 30 20 40 -> 10 20 30 40 50にソートする |
+> 10 50 30 20 40 -> 10 20 30 40 50にソートする
 
-![img-description](/images/posts/2023-02-03-algorithm-insert-sort/image1.PNG)
+挿入ソートの流れ   
+![挿入ソートの流れ](/images/posts/2023-02-03-algorithm-insert-sort/image1.PNG)
 
-## 挿入ソートの特徴
+## 挿入ソートのメリットとデメリット
+メリット
++ アルゴリズムが簡単です。
++ 既にソートされている場合はとても効率的です。   
+
+デメリット
++ 多くのレコードの移動が発生する。
++ レコードの数が多い場合は効率がよくない。
+
+## 挿入ソートのコード(Java)
+挿入ソートのコードのコード例です。(Java)
+
+    int[] numbers = new int[] {10, 50, 30, 20, 40};
+    int[] sortedNumbers = new int[numbers.length];
+
+    // 未整列要素をループ
+    for (int i = 0; i < numbers.length; i++) {
+      int currentNumber = numbers[i];
+      sortedNumbers[i] = currentNumber;
+      // 整列済み配列をループ
+      for (int j = i; (0 < j && currentNumber < sortedNumbers[j - 1]); j--) {
+        sortedNumbers[j] = sortedNumbers[j - 1];
+        sortedNumbers[j - 1] = currentNumber;
+      }
+    }
+
+結果
+
+    10 20 30 40 50 
